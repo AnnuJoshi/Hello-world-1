@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void compute (string arr1[],string arr2[], int n1, int n2){
+    map<string,int> hashmap;
+    for(int i=0;i<n1;i++){
+        hashmap[arr1[i]]++;
+    }
+
+    for(int i=0;i<n2;i++){
+        hashmap[arr2[i]]++;
+    }
+    string diff;
+    string same;
+    for(map<string,int>::iterator i=hashmap.begin();i!=hashmap.end();i++){
+        if(i->second>1)
+         same+=i->first;
+         else if (i->second==1)
+         diff+=i->first;
+    }
+
+    cout<<same<<" "<<diff;
+}
+
+
+int main(){
+ string arr1[] ={"abc","fhh"};
+ string arr2[]={"abc","dsgg"};
+ compute(arr1, arr2,2,2);
+ return 0;
+}
