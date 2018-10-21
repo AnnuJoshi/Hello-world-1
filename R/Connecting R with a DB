@@ -1,0 +1,1 @@
+mydb = dbConnect(MySQL(), user='username', password='password', dbname='dbname',  host='temp-cluster-name.us-west-2.rds.amazonaws.com')
